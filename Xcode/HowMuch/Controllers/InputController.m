@@ -27,6 +27,7 @@ NS_ENUM(NSInteger, HM_InputRowType) {
     HM_InputRowTypeName,
     HM_InputRowTypePrice,
     HM_InputRowTypeUnit,
+    HM_InputRowTypeStore,
     HM_InputRowTypeCount,
 };
 
@@ -162,13 +163,14 @@ NS_ENUM(NSInteger, HM_InputRowType) {
     }
     
     cell.textField.tag = indexPath.row;
-    cell.textField.placeholder = indexPath.row == HM_InputRowTypeUnit ? @"(optional)":nil;
+    cell.textField.placeholder = indexPath.row == HM_InputRowTypeUnit || indexPath.row == HM_InputRowTypeStore ? @"(optional)":nil;
     cell.textField.keyboardType = indexPath.row == HM_InputRowTypePrice ? UIKeyboardTypeDecimalPad : UIKeyboardTypeAlphabet;
     
     cell.label.text = ({
         NSArray *labels = @[@"Name",
                             @"Price",
                             @"Unit",
+                            @"Store",
                             ];
         labels[indexPath.row];
     });
@@ -178,6 +180,7 @@ NS_ENUM(NSInteger, HM_InputRowType) {
                           self.item.name,
                           self.item.price.stringValue,
                           self.item.unit?:@"",
+                          self.item.store?:@"",
                           ];
         
         cell.textField.text = item[indexPath.row];
@@ -226,6 +229,9 @@ NS_ENUM(NSInteger, HM_InputRowType) {
     if (self.item) {
         if (textField.tag == HM_InputRowTypeName)
             self.item.name = combined;
+
+        if (textField.tag == HM_InputRowTypeStore)
+            self.item.store = combined;
         
         if (textField.tag == HM_InputRowTypePrice)
             self.item.price = @(combined.floatValue);
@@ -243,6 +249,9 @@ NS_ENUM(NSInteger, HM_InputRowType) {
         if (textField.tag == HM_InputRowTypeName)
             self.addItem.name = combined;
         
+        if (textField.tag == HM_InputRowTypeStore)
+            self.addItem.store = combined;
+
         if (textField.tag == HM_InputRowTypePrice)
             self.addItem.price = @(combined.floatValue);
         

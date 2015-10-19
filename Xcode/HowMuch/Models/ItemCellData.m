@@ -20,10 +20,15 @@
 {
     // style
     cell.unitLabel.backgroundColor = [color colorWithAlphaComponent:.4];
+    cell.storeLabel.backgroundColor = cell.unitLabel.backgroundColor;
+    
+    cell.unitLabel.textColor = [UIColor whiteColor];
+    cell.storeLabel.textColor = cell.unitLabel.textColor;
     
     // values
     cell.nameLabel.text = item.name;
-    cell.unitLabel.text = item.unit;
+    cell.storeLabel.text = item.store.lowercaseString;
+    cell.unitLabel.text = item.unit.lowercaseString;    
     cell.priceLabel.attributedText = ({
         NSNumber *price = item.price;
         NSString *combined = [NSString stringWithFormat:@"%@%.2f", currency, price.floatValue];
@@ -36,13 +41,19 @@
     });
     
     // constraints
-    cell.priceTopConstraint.constant = item.unit.length>0?kCellPadVertical:20;
-    cell.unitWidthConstraint.constant = ({
-        NSDictionary *attributes = @{NSFontAttributeName:cell.unitLabel.font};
-        CGSize size = [item.unit sizeWithAttributes:attributes];
-        CGFloat pad = 6;
-        item.unit.length==0?0:size.width + pad * 2;
-    });
+//    cell.priceTopConstraint.constant = item.unit.length>0?kCellPadVertical:20;
+    cell.unitWidthConstraint.constant = [self widthForString:item.unit font:cell.unitLabel.font];
+    cell.storeWidthConstraint.constant = [self widthForString:item.store font:cell.storeLabel.font];
+}
+
+#pragma mark Private
+
++ (CGFloat)widthForString:(NSString *)string font:(UIFont *)font {
+    NSDictionary *attributes = @{NSFontAttributeName:font};
+    CGSize size = [string sizeWithAttributes:attributes];
+    CGFloat pad = 6;
+
+    return string.length==0?0:size.width + pad * 2;
 }
 
 @end

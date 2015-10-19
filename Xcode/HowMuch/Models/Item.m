@@ -20,6 +20,7 @@
     self.name = @"";
     self.price = @0;
     self.unit = @"";
+    self.store = @"";
     
     return self;
 }
@@ -27,7 +28,7 @@
 #pragma mark - Override
 
 - (NSString *)description {    
-    return [NSString stringWithFormat:@"<%@: %p> %@: %@ with price %@ and unit %@", self.class, self, self.itemId, self.name, self.price, self.unit];
+    return [NSString stringWithFormat:@"<%@: %p> %@: %@ with price %@, unit %@, store %@", self.class, self, self.itemId, self.name, self.price, self.unit, self.store];
 }
 
 - (BOOL)isEqual:(Item *)object {
@@ -40,15 +41,11 @@
 
 #pragma mark NSCoding
 
-static NSString * const hm_key_Id = @"id";
-static NSString * const hm_key_Name = @"name";
-static NSString * const hm_key_Price = @"price";
-static NSString * const hm_key_Unit = @"unit";
-
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:self.itemId forKey:hm_key_Id];
     [aCoder encodeObject:self.name forKey:hm_key_Name];
     [aCoder encodeObject:self.price forKey:hm_key_Price];
+    [aCoder encodeObject:self.store forKey:hm_key_Store];
     [aCoder encodeObject:self.unit forKey:hm_key_Unit];
 }
 
@@ -61,6 +58,7 @@ static NSString * const hm_key_Unit = @"unit";
     self.itemId = [aDecoder decodeObjectForKey:hm_key_Id];
     self.name = [aDecoder decodeObjectForKey:hm_key_Name];
     self.price = [aDecoder decodeObjectForKey:hm_key_Price];
+    self.store = [aDecoder decodeObjectForKey:hm_key_Store];
     self.unit = [aDecoder decodeObjectForKey:hm_key_Unit];
     
     return self;
@@ -75,6 +73,7 @@ static NSString * const hm_key_Unit = @"unit";
     item.itemId = self.itemId;
     item.name = self.name;
     item.price = self.price;
+    item.store = self.store;
     item.unit = self.unit;    
     
     return item;

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-static CGFloat kCellPadVertical = 8;
+//static CGFloat kCellPadVertical = 8;
 
 @interface ItemCell : UITableViewCell
 
@@ -16,14 +16,18 @@ static CGFloat kCellPadVertical = 8;
 
 @property (strong, nonatomic) UILabel *nameLabel;
 
+@property (strong, nonatomic) UILabel *storeLabel;
+
 @property (strong, nonatomic) UILabel *priceLabel;
 
 @property (strong, nonatomic) UILabel *unitLabel;
 
 // Constraints
 
-@property (strong, nonatomic) NSLayoutConstraint *priceTopConstraint;
+//@property (strong, nonatomic) NSLayoutConstraint *priceTopConstraint;
 
 @property (strong, nonatomic) NSLayoutConstraint *unitWidthConstraint;
+
+@property (strong, nonatomic) NSLayoutConstraint *storeWidthConstraint;
 
 @end

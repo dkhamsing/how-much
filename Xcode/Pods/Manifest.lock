@@ -1,5 +1,14 @@
 PODS:
   - Bolts/Tasks (1.3.0)
+  - DKAuthenticationViewController (0.2):
+    - DKTwitterReverseAuth
+  - DKHud (0.1)
+  - DKParseAuth (0.1):
+    - DKAuthenticationViewController
+    - DKHud
+    - DKTwitterReverseAuth
+    - Parse
+    - ParseTwitterUtils
   - DKTwitterReverseAuth (0.1):
     - OAuthCore
   - Keys (1.0.0)
@@ -12,22 +21,26 @@ PODS:
     - Bolts/Tasks (>= 1.2.2)
     - Parse (~> 1.8.5)
   - Reachability (3.2)
-  - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
+  - DKParseAuth (from `~/Documents/DKParseAuth`)
   - DKTwitterReverseAuth (~> 0.1)
   - Keys (from `Pods/CocoaPodsKeys`)
   - Parse (~> 1.8.5)
   - ParseTwitterUtils (~> 1.8.5)
   - Reachability (~> 3.2)
-  - SVProgressHUD (~> 1.1.3)
 
 EXTERNAL SOURCES:
+  DKParseAuth:
+    :path: ~/Documents/DKParseAuth
   Keys:
     :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
   Bolts: 805a4a87413e49d4a0c2b7d469084cbc46b09342
+  DKAuthenticationViewController: c1e0f3a1acc37fe92750771083c8d12e2cce4bb1
+  DKHud: 2dc0ec2de670c723878ef45dc41d2f3973e42f15
+  DKParseAuth: 847d4a0ca34728a078e642220f38a31e8c17e217
   DKTwitterReverseAuth: 5e89a21503348fe8464e0e1c086e706a400d7bfa
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
@@ -35,6 +48,5 @@ SPEC CHECKSUMS:
   Parse: 17ad8e0677ed682f7f00503860fcda0f4eb74168
   ParseTwitterUtils: 408a2a9220b051c18fe45797db3f272d548e51f1
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
 COCOAPODS: 0.38.2

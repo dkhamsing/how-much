@@ -8,17 +8,11 @@
 
 #import "SetupController.h"
 
-// Authentication
-#import "AuthenticationParse.h"
-
 // Constants
 #import "HowMuchConstants.h"
 
-// Controllers
-#import "AuthenticationController.h"
-
-// Frameworks
-#import <Parse/Parse.h>
+// Libraries
+#import "dkparseauth.h"
 
 NS_ENUM(NSInteger, HM_setupSectionType) {
     HM_setupSectionTypeStorage,
@@ -199,8 +193,7 @@ NS_ENUM(NSInteger, HM_setupSectionType) {
             UIAlertController *controller = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
             
             UIAlertAction *confirmLogout = [UIAlertAction actionWithTitle:@"Confirm Logout" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-                id<AuthenticationProtocol> authentication = [[AuthenticationParse alloc] init];
-                [authentication logout];
+                [[DKParseAuth sharedInstance] logout];
                 [self storageSelected:HM_storageTypeLocal];
             }];
             [controller addAction:confirmLogout];
@@ -238,10 +231,13 @@ NS_ENUM(NSInteger, HM_setupSectionType) {
     }
     
     if (indexPath.row == HM_storageTypeParse) {
-        if (![PFUser currentUser]) {
-            AuthenticationController *loginController = [[AuthenticationController alloc] init];
-            loginController.authentication = [[AuthenticationParse alloc] init];
-            [self.navigationController pushViewController:loginController animated:YES];
+        if (![DKParseAuth sharedInstance].authenticated) {
+            UIViewController *controller = [[DKParseAuth sharedInstance] authViewControllerWithPasswordLength:8 hud:[DKParseAuth sharedInstance].hud successBlock:^(id user, BOOL signup) {
+                NSLog(@"success sign in TODO...?? ");
+                [self storageSelected:HM_storageTypeParse];
+            }];
+            
+            [self presentViewController:controller animated:YES completion:nil];
         }
         else {
             [self storageSelected:HM_storageTypeParse];

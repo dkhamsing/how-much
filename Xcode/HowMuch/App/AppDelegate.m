@@ -18,8 +18,8 @@
 // Controllers
 #import "MainController.h"
 
-// Frameworks
-#import <Parse/Parse.h>
+// Libraries
+#import "dkparseauth.h"
 
 @interface AppDelegate ()
 
@@ -31,8 +31,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    HowmuchKeys *keys = [[HowmuchKeys alloc] init];    
-    [Parse setApplicationId:keys.parseClientId clientKey:keys.parseClientKey];
+    HowmuchKeys *keys = [[HowmuchKeys alloc] init];
+    
+    [[DKParseAuth sharedInstance] configureWithParseClientId:keys.parseClientId parseClientKey:keys.parseClientKey];
+    [[DKParseAuth sharedInstance] configureWithTwitterConsumerKey:keys.twitterConsumerKey twitterConsumerSecret:keys.twitterConsumerSecret];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.tintColor = [UIColor hm_tintColor];
@@ -41,7 +43,7 @@
         navigationController;
     });
     [self.window makeKeyAndVisible];
-    
+
     return YES;
 }
 

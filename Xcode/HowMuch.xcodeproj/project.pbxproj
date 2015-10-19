@@ -22,8 +22,6 @@
 		CE6C8BF61BA75A7500F08D18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6C8BF41BA75A7500F08D18 /* LaunchScreen.storyboard */; };
 		CE6C8C011BA75A7500F08D18 /* HowMuchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C8C001BA75A7500F08D18 /* HowMuchTests.m */; };
 		CE6C8C0C1BA75A7500F08D18 /* HowMuchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C8C0B1BA75A7500F08D18 /* HowMuchUITests.m */; };
-		CE7D68641BB0582300023875 /* AuthenticationParse.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7D68621BB0582300023875 /* AuthenticationParse.m */; settings = {ASSET_TAGS = (); }; };
-		CE9A0A201BAB768600E5C068 /* AuthenticationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9A0A1F1BAB768600E5C068 /* AuthenticationController.m */; };
 		CE9AF4E51BB5AE9900B9EC7A /* ItemCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9AF4E41BB5AE9900B9EC7A /* ItemCellData.m */; };
 		CEA04D781BAB11EF00563223 /* DataStorageUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA04D771BAB11EF00563223 /* DataStorageUserDefaults.m */; };
 		CEADBB631BB1CC0800869C93 /* UIColor+HM.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADBB621BB1CC0800869C93 /* UIColor+HM.m */; settings = {ASSET_TAGS = (); }; };
@@ -80,11 +78,6 @@
 		CE6C8C071BA75A7500F08D18 /* HowMuchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowMuchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6C8C0B1BA75A7500F08D18 /* HowMuchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HowMuchUITests.m; sourceTree = "<group>"; };
 		CE6C8C0D1BA75A7500F08D18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE7D68611BB0582300023875 /* AuthenticationParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationParse.h; sourceTree = "<group>"; };
-		CE7D68621BB0582300023875 /* AuthenticationParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationParse.m; sourceTree = "<group>"; };
-		CE7D68631BB0582300023875 /* AuthenticationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationProtocol.h; sourceTree = "<group>"; };
-		CE9A0A1E1BAB768600E5C068 /* AuthenticationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationController.h; sourceTree = "<group>"; };
-		CE9A0A1F1BAB768600E5C068 /* AuthenticationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationController.m; sourceTree = "<group>"; };
 		CE9AF4E31BB5AE9900B9EC7A /* ItemCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCellData.h; sourceTree = "<group>"; };
 		CE9AF4E41BB5AE9900B9EC7A /* ItemCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCellData.m; sourceTree = "<group>"; };
 		CEA04D761BAB11EF00563223 /* DataStorageUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStorageUserDefaults.h; sourceTree = "<group>"; };
@@ -145,8 +138,6 @@
 		CE60A7761BAC89F1003D94ED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE9A0A1E1BAB768600E5C068 /* AuthenticationController.h */,
-				CE9A0A1F1BAB768600E5C068 /* AuthenticationController.m */,
 				CE40319D1BAB25C400909E0F /* InputController.h */,
 				CE40319E1BAB25C400909E0F /* InputController.m */,
 				CE6C8BEC1BA75A7500F08D18 /* MainController.h */,
@@ -271,9 +262,6 @@
 		CE7D68601BB0582300023875 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				CE7D68611BB0582300023875 /* AuthenticationParse.h */,
-				CE7D68621BB0582300023875 /* AuthenticationParse.m */,
-				CE7D68631BB0582300023875 /* AuthenticationProtocol.h */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -460,12 +448,10 @@
 				CE59A93E1BA8AC000092FA51 /* ItemCell.m in Sources */,
 				CE3277291BAB2F630050F0D2 /* InputCell.m in Sources */,
 				CE6C8BEE1BA75A7500F08D18 /* MainController.m in Sources */,
-				CE9A0A201BAB768600E5C068 /* AuthenticationController.m in Sources */,
 				CE6C8BEB1BA75A7500F08D18 /* AppDelegate.m in Sources */,
 				CE59A93B1BA8A6D60092FA51 /* Item.m in Sources */,
 				CE6C8BE81BA75A7500F08D18 /* main.m in Sources */,
 				CE5464AD1BB5BB88008427F5 /* UIViewController+HM.m in Sources */,
-				CE7D68641BB0582300023875 /* AuthenticationParse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

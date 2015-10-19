@@ -1,2 +1,1 @@
-PARSETWITTERUTILS_LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/ParseTwitterUtils"
-PARSETWITTERUTILS_OTHER_LDFLAGS = -ObjC -l"ParseTwitterUtilsLib" -l"sqlite3" -l"z" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreLocation" -framework "QuartzCore" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration" -weak_framework "Accounts" -weak_framework "Social"
+PARSETWITTERUTILS_OTHER_LDFLAGS = -l"sqlite3" -l"z" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreLocation" -framework "QuartzCore" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration" -weak_framework "Accounts" -weak_framework "Social"

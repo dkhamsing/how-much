@@ -35,7 +35,7 @@
 @property (nonatomic) CGFloat hudAnimationDuration;
 
 /**
- Minimum password length.
+ Minimum password length (default value is 1, cannot be smaller than 1).
  */
 @property (nonatomic) NSInteger passwordLength;
 

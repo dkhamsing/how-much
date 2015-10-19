@@ -37,7 +37,6 @@
  Email signup.
  @param email Email address.
  @param password Account password.
- @param password Confirm password.
  @param completion Block to be executed after authentication was initiated.
  */
 - (void)signupWithEmail:(NSString *)email password:(NSString *)password completion:(void (^)(id user, NSString *errorMessage))completionBlock;

@@ -1,1 +1,1 @@
-../../../../../../DKParseAuth/DKParseAuth/DKAuthenticationParse.h
+../../../DKParseAuth/DKParseAuth/DKAuthenticationParse.h

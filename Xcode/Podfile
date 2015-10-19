@@ -1,11 +1,8 @@
 platform :ios, '8.0'
 
 target 'HowMuch' do
-  pod 'Parse', '~> 1.8.5'
-  pod 'ParseTwitterUtils', '~> 1.8.5' 
-  pod 'DKTwitterReverseAuth', '~> 0.1'
   pod 'Reachability', '~> 3.2'
-  pod 'DKParseAuth', :path => '~/Documents/DKParseAuth'
+  pod 'DKParseAuth'
 end
 
 target 'HowMuchTests' do

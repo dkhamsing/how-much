@@ -65,9 +65,10 @@ static BOOL logging = NO;
             Item *item = [[Item alloc] init];
             
             item.itemId = object.objectId;
-            item.name = object[@"name"];
-            item.unit = object[@"unit"];
-            item.price = object[@"price"];
+            item.name = object[hm_key_Name];
+            item.price = object[hm_key_Price];
+            item.store = object[hm_key_Store];
+            item.unit = object[hm_key_Unit];
             
             [list addObject:item];
         }
@@ -87,16 +88,17 @@ static BOOL logging = NO;
 {
     PFObject *parseItem = [PFObject objectWithClassName:itemClassName];
     
-    parseItem[@"name"] = item.name;
-    parseItem[@"price"] = item.price;
-    parseItem[@"unit"] = item.unit;
+    parseItem[hm_key_Name] = item.name;
+    parseItem[hm_key_Store] = item.store;
+    parseItem[hm_key_Price] = item.price;
+    parseItem[hm_key_Unit] = item.unit;
     
     parseItem[@"userId"] = [PFUser currentUser].objectId;
     
     [parseItem saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             successBlock(succeeded?nil:error);
-        });        
+        });
     }];
 }
 
@@ -108,9 +110,10 @@ static BOOL logging = NO;
             successBlock(error);
         }
         else {
-            parseItem[@"name"] = item.name;
-            parseItem[@"price"] = item.price;
-            parseItem[@"unit"] = item.unit;
+            parseItem[hm_key_Name] = item.name;
+            parseItem[hm_key_Price] = item.price;
+            parseItem[hm_key_Store] = item.store;
+            parseItem[hm_key_Unit] = item.unit;
             
             [parseItem saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
                 successBlock(succeeded?nil:error);

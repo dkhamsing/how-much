@@ -22,6 +22,7 @@ The app can keep a list of such items (add, edit and delete) :moneybag:
 The bulk of the code is in [`HowMuch-Core`](HowMuch-Core) using [`auth`](https://github.com/dkhamsing/DKAuthenticationViewController/blob/master/DKAuthenticationViewController/DKAuthenticationProtocol.h) and [`storage`](HowMuch-Core/StorageProtocol.h) protocols:
 
 1. [User Defaults](HowMuch-UserDefaults/)
+- [Firebase](HowMuch-Firebase/)
 
 ## Contact
 

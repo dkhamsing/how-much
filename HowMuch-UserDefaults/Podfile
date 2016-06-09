@@ -1,0 +1,1 @@
+pod 'HowMuchCore', :path => '../HowMuch-Core/'

@@ -2,6 +2,8 @@
 
 iOS app to record how much things cost using various data persistence implementations.
 
+![](Assets/screens.png)
+
 The basic data unit is an `item`, a simple dictionary:
 
 ```objc

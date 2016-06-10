@@ -27,6 +27,8 @@ The bulk of the code is in [`HowMuch-Core`](HowMuch-Core) using [`auth`](https:/
 - [Parse](HowMuch-Parse/)
 - [Firebase](HowMuch-Firebase/)
 
+Input is managed by [`XLForm`](https://github.com/xmartlabs/XLForm) :moneybag:
+
 ## Contact
 
 - [github.com/dkhamsing](https://github.com/dkhamsing)

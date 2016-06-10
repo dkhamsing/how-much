@@ -26,9 +26,11 @@
 
 @property (nonatomic) BOOL overrideSignIn;
 
+@property (nonatomic) BOOL signedIn;
+
 @property (nonatomic, strong) NSString *title;
 
-@property (nonatomic) BOOL signedIn;
+@property (nonatomic, strong) NSString *unit;
 
 + (instancetype)coreViewModel;
 

@@ -206,14 +206,24 @@
     return self.coordinator.items.count;
 }
 
+static NSString * const cellId = @"cellId";
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     NSDictionary *item = self.coordinator.items[indexPath.row];
 
     NSDictionary *values = [self.coordinator.storage valuesForItem:item];
-
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellId];
+    }
+    
+    NSNumber *priceNumber = values[@"price"];
+    NSString *price = [NSString stringWithFormat:@"%@%.2f", self.coordinator.unit, priceNumber.doubleValue];
+    
     cell.textLabel.text = values[@"name"];
+    cell.detailTextLabel.text = price;
 
     return cell;
 }
@@ -252,6 +262,7 @@
 
     viewModel.title = @"How Much";
     viewModel.backgroundColor = [UIColor lightGrayColor];
+    viewModel.unit = @"$";
 
     return viewModel;
 }

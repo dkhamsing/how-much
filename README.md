@@ -19,7 +19,7 @@ The basic data unit is an `item`, a simple dictionary:
 }
 ```
 
-The app can keep a list of such items (add, edit and delete) :moneybag:
+The app can keep a list of such items (add, edit and delete).
 
 The bulk of the code is in [`HowMuch-Core`](HowMuch-Core) using [`auth`](https://github.com/dkhamsing/DKAuthenticationViewController/blob/master/DKAuthenticationViewController/DKAuthenticationProtocol.h) and [`storage`](HowMuch-Core/StorageProtocol.h) protocols:
 

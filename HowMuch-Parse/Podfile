@@ -1,0 +1,10 @@
+pod 'HowMuchCore', :path => '../HowMuch-Core/'
+pod 'DKParseAuth'
+
+plugin 'cocoapods-keys', {
+    :project => 'how-much',
+    :keys => [
+    'ParseClientId',
+    'ParseClientKey'
+    ]
+}

@@ -1,6 +1,6 @@
 # how-much
 
-iOS app to record how much things cost using various data persistence implementations. 
+iOS app to record how much things cost using various data persistence implementations.
 
 The basic data unit is an `item`, a simple dictionary:
 
@@ -22,6 +22,7 @@ The app can keep a list of such items (add, edit and delete) :moneybag:
 The bulk of the code is in [`HowMuch-Core`](HowMuch-Core) using [`auth`](https://github.com/dkhamsing/DKAuthenticationViewController/blob/master/DKAuthenticationViewController/DKAuthenticationProtocol.h) and [`storage`](HowMuch-Core/StorageProtocol.h) protocols:
 
 1. [User Defaults](HowMuch-UserDefaults/)
+- [Parse](HowMuch-Parse/)
 - [Firebase](HowMuch-Firebase/)
 
 ## Contact

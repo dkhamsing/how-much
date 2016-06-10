@@ -1,0 +1,54 @@
+PODS:
+  - Bolts/Tasks (1.7.0)
+  - DKAuthenticationViewController (0.2.1):
+    - DKTwitterReverseAuth (~> 0.1)
+  - DKHud (0.1)
+  - DKParseAuth (0.1):
+    - DKAuthenticationViewController (~> 0.2)
+    - DKHud (~> 0.1)
+    - DKTwitterReverseAuth (~> 0.1)
+    - Parse (~> 1.9)
+    - ParseTwitterUtils (~> 1.9)
+  - DKTwitterReverseAuth (0.1):
+    - OAuthCore
+  - HowMuchCore (0.1.0):
+    - DKAuthenticationViewController (~> 0.2)
+    - DKHud (~> 0.1)
+    - XLForm (~> 3.1)
+  - Keys (1.0.0)
+  - NSData+Base64 (1.0.0)
+  - OAuthCore (0.0.1):
+    - NSData+Base64
+  - Parse (1.13.0):
+    - Bolts/Tasks (~> 1.6)
+  - ParseTwitterUtils (1.10.0):
+    - Bolts/Tasks (~> 1.5)
+    - Parse (~> 1.9)
+  - XLForm (3.1.2)
+
+DEPENDENCIES:
+  - DKParseAuth
+  - HowMuchCore (from `../HowMuch-Core/`)
+  - Keys (from `Pods/CocoaPodsKeys`)
+
+EXTERNAL SOURCES:
+  HowMuchCore:
+    :path: ../HowMuch-Core/
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
+SPEC CHECKSUMS:
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  DKAuthenticationViewController: b76a2c416be75f755cca922d112036de6eefc2b6
+  DKHud: 2dc0ec2de670c723878ef45dc41d2f3973e42f15
+  DKParseAuth: b74c5a1032b574c2c063911ff2cb25ec6d9140de
+  DKTwitterReverseAuth: 5e89a21503348fe8464e0e1c086e706a400d7bfa
+  HowMuchCore: b70f515c5321f9d01b717684176289b15776b637
+  Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
+  NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
+  OAuthCore: 43dce261db846a1fe20234d95654257e00e78581
+  Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
+  ParseTwitterUtils: 8856ac80da50bbb0f0bcf251def20b62e1ae6bc4
+  XLForm: 6bb3c20857e2983cf494cb8b4d666c2a24673d5e
+
+COCOAPODS: 0.39.0

@@ -1,1 +1,2 @@
 pod 'HowMuchCore', :path => '../HowMuch-Core/'
+link_with 'HowMuch-UserDefaults', 'HowMuch-UserDefaultsTests'

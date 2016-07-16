@@ -1,6 +1,6 @@
 # how-much
 
-iOS app to record how much things cost using `NSUserDefaults` (you should be using a `Property List`).
+iOS app to record how much things cost using `NSUserDefaults` (you should be using a `Property List` :sweat_smile:).
 
 ## Getting Started
 

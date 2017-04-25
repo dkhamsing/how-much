@@ -1,0 +1,4 @@
+target 'HowMuch-Realm' do
+  pod 'HowMuchCore', :path => '../HowMuch-Core/'
+  pod 'Realm', '~> 2.4.3'
+end

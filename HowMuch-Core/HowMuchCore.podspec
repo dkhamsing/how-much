@@ -5,8 +5,13 @@ Pod::Spec.new do |s|
 
   s.author           = { 'dkhamsing' => 'dkhamsing8@gmail.com' }
 
+  s.homepage = 'https://github.com/dkhamsing'
+
   s.ios.deployment_target = '8.0'
 
+  s.license = 'other'
+
+  s.source = { :path => '.' }
   s.source_files = '*.{h,m}'
 
   s.requires_arc = true

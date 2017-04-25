@@ -23,9 +23,13 @@ The app can keep a list of such items (add, edit and delete).
 
 The bulk of the code is in [`HowMuch-Core`](HowMuch-Core) using [`auth`](https://github.com/dkhamsing/DKAuthenticationViewController/blob/master/DKAuthenticationViewController/DKAuthenticationProtocol.h) and [`storage`](HowMuch-Core/StorageProtocol.h) protocols:
 
+## Local / Device
 1. [User Defaults](HowMuch-UserDefaults/)
-- [Parse](HowMuch-Parse/)
-- [Firebase](HowMuch-Firebase/)
+2. [Realm](HowMuch-Realm/)
+
+## Server
+1. [Parse](HowMuch-Parse/)
+2. [Firebase](HowMuch-Firebase/)
 
 Input is managed by [`XLForm`](https://github.com/xmartlabs/XLForm) :moneybag:
 

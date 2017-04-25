@@ -1,2 +1,7 @@
-pod 'HowMuchCore', :path => '../HowMuch-Core/'
-link_with 'HowMuch-UserDefaults', 'HowMuch-UserDefaultsTests'
+target 'HowMuch-UserDefaults' do
+  pod 'HowMuchCore', :path => '../HowMuch-Core/'
+end
+
+target 'HowMuch-UserDefaultsTests' do
+  pod 'HowMuchCore', :path => '../HowMuch-Core/'
+end

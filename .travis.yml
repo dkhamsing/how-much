@@ -3,3 +3,6 @@ osx_image: xcode8.3
 podfile: HowMuch-UserDefaults/Podfile
 script:
   - xcodebuild -workspace HowMuch-UserDefaults/HowMuch-UserDefaults.xcworkspace/ -scheme HowMuch-UserDefaults clean test -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' | xcpretty -s
+  - cd HowMuch-Realm
+  - pod install
+  - xcodebuild -workspace HowMuch-Realm.xcworkspace/ -scheme HowMuch-Realm clean build -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' | xcpretty -s

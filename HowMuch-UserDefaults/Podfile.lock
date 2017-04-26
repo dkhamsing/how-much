@@ -1,17 +1,17 @@
 PODS:
-  - DKAuthenticationViewController (0.2.1):
-    - DKTwitterReverseAuth (~> 0.1)
+  - DKAuthenticationViewController (0.2):
+    - DKTwitterReverseAuth
   - DKHud (0.1)
   - DKTwitterReverseAuth (0.1):
     - OAuthCore
   - HowMuchCore (0.1.0):
-    - DKAuthenticationViewController (~> 0.2)
-    - DKHud (~> 0.1)
-    - XLForm (~> 3.1)
+    - DKAuthenticationViewController (= 0.2)
+    - DKHud (= 0.1)
+    - XLForm (= 3.1)
   - NSData+Base64 (1.0.0)
   - OAuthCore (0.0.1):
     - NSData+Base64
-  - XLForm (3.1.2)
+  - XLForm (3.1.0)
 
 DEPENDENCIES:
   - HowMuchCore (from `../HowMuch-Core/`)
@@ -21,12 +21,14 @@ EXTERNAL SOURCES:
     :path: ../HowMuch-Core/
 
 SPEC CHECKSUMS:
-  DKAuthenticationViewController: b76a2c416be75f755cca922d112036de6eefc2b6
+  DKAuthenticationViewController: c1e0f3a1acc37fe92750771083c8d12e2cce4bb1
   DKHud: 2dc0ec2de670c723878ef45dc41d2f3973e42f15
   DKTwitterReverseAuth: 5e89a21503348fe8464e0e1c086e706a400d7bfa
-  HowMuchCore: b70f515c5321f9d01b717684176289b15776b637
+  HowMuchCore: 9a51fe73a7877457fa2f970b6b4f1862180a7b6e
   NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
   OAuthCore: 43dce261db846a1fe20234d95654257e00e78581
-  XLForm: 6bb3c20857e2983cf494cb8b4d666c2a24673d5e
+  XLForm: 754b061f9f4b249a7ab7548efb22f1b586e26740
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 32e9c4d42403a6883187f3a1d0724c4c67f5c009
+
+COCOAPODS: 1.2.1

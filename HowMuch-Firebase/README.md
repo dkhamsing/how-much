@@ -13,9 +13,9 @@ pod install
 ```
 
 1. Create a Firebase iOS app https://firebase.google.com/ (download **GoogleService-Info.plist** file)
-- Setup **Sign in method**: enable `email`
-- Open **HowMuch-Firebase.xcworkspace**
-- Copy **GoogleService-Info.plist** in Xcode
+2. Setup **Sign in method**: enable `email`
+3. Open **HowMuch-Firebase.xcworkspace**
+4. Copy **GoogleService-Info.plist** in Xcode
 
 :rocket:
 

@@ -14,7 +14,7 @@
 		CE0A386F1D0C4C2C0055A0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0A386D1D0C4C2C0055A0D8 /* LaunchScreen.storyboard */; };
 		CE0A387A1D0C4CAE0055A0D8 /* FirebaseAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0A38771D0C4CAE0055A0D8 /* FirebaseAuth.m */; };
 		CE0A387B1D0C4CAE0055A0D8 /* FirebaseStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0A38791D0C4CAE0055A0D8 /* FirebaseStorage.m */; };
-		CE0A387D1D0C4CD90055A0D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0A387C1D0C4CD90055A0D8 /* GoogleService-Info.plist */; };
+		D6148EC21EB114360060328A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6148EC11EB114360060328A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		CE0A38771D0C4CAE0055A0D8 /* FirebaseAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseAuth.m; sourceTree = "<group>"; };
 		CE0A38781D0C4CAE0055A0D8 /* FirebaseStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseStorage.h; sourceTree = "<group>"; };
 		CE0A38791D0C4CAE0055A0D8 /* FirebaseStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseStorage.m; sourceTree = "<group>"; };
-		CE0A387C1D0C4CD90055A0D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../secrets/how-much-firebase/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D6148EC11EB114360060328A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D768A49AF88F1C6A93930E10 /* Pods-HowMuch-Firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowMuch-Firebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-HowMuch-Firebase/Pods-HowMuch-Firebase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +76,7 @@
 		CE0A385E1D0C4C2C0055A0D8 /* HowMuch-Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				CE0A387C1D0C4CD90055A0D8 /* GoogleService-Info.plist */,
+				D6148EC11EB114360060328A /* GoogleService-Info.plist */,
 				CE0A38761D0C4CAE0055A0D8 /* FirebaseAuth.h */,
 				CE0A38771D0C4CAE0055A0D8 /* FirebaseAuth.m */,
 				CE0A38781D0C4CAE0055A0D8 /* FirebaseStorage.h */,
@@ -169,8 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0A386F1D0C4C2C0055A0D8 /* LaunchScreen.storyboard in Resources */,
-				CE0A387D1D0C4CD90055A0D8 /* GoogleService-Info.plist in Resources */,
 				CE0A386C1D0C4C2C0055A0D8 /* Assets.xcassets in Resources */,
+				D6148EC21EB114360060328A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

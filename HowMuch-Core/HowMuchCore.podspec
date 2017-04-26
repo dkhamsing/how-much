@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.dependency 'DKHud', '~> 0.1'
-  s.dependency 'DKAuthenticationViewController', '~> 0.2'
-  s.dependency 'XLForm', '~> 3.1'
+  s.dependency 'DKHud', '0.1'
+  s.dependency 'DKAuthenticationViewController', '0.2'
+  s.dependency 'XLForm', '3.1'
 end

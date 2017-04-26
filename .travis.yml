@@ -2,4 +2,4 @@ language: objective-c
 osx_image: xcode8.3
 podfile: HowMuch-UserDefaults/Podfile
 script:
-  - xcodebuild -workspace HowMuch-UserDefaults/HowMuch-UserDefaults.xcworkspace/ -scheme HowMuch-UserDefaults clean test -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.2' | xcpretty -s
+  - xcodebuild -workspace HowMuch-UserDefaults/HowMuch-UserDefaults.xcworkspace/ -scheme HowMuch-UserDefaults clean test -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' | xcpretty -s

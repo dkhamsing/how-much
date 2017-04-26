@@ -16,6 +16,8 @@
 
 @property NSString *brand;
 
+@property NSInteger dateUpdated;
+
 @property NSString *name;
 
 @property double price;
@@ -56,17 +58,22 @@
     NSDictionary *v = d.allValues.firstObject;
     
     NSString *brand = v[@"brand"];
+
+    NSInteger dateUpdated = [NSDate new].timeIntervalSince1970;
+    
     NSString *name = v[@"name"];
     
     NSNumber *p = v[@"price"];
     double price = p.doubleValue;
 
     NSString *store = v[@"store"];
+    
     NSString *unit = v[@"unit"];
     
     Item *i = [Item new];
     i.itemId = itemId;
     i.brand = brand?:@"";
+    i.dateUpdated = dateUpdated;
     i.name = name;
     i.price = price;
     i.store = store?:@"";
@@ -85,12 +92,16 @@
 - (void)updateItem:(id)item withValue:(NSDictionary *)v completion:(void (^)(NSError *))completion;
 {    
     NSString *brand = v[@"brand"];
+    
     NSString *name = v[@"name"];
+    
+    NSInteger dateUpdated = [NSDate new].timeIntervalSince1970;
     
     NSNumber *p = v[@"price"];
     double price = p.doubleValue;
     
     NSString *store = v[@"store"];
+    
     NSString *unit = v[@"unit"];
     
     Item *i = item;
@@ -100,6 +111,7 @@
     [realm beginWriteTransaction];
 
     i.brand = [RealmStorage _safeString:brand];
+    i.dateUpdated = dateUpdated;
     i.name = name;
     i.price = price;
     i.store = [RealmStorage _safeString:store];

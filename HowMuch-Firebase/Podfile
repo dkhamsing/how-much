@@ -1,4 +1,6 @@
-pod 'HowMuchCore', :path => '../HowMuch-Core/'
-pod 'Firebase', '~> 3.2'
-pod 'Firebase/Auth', '~> 3.2'
-pod 'Firebase/Database'
+target 'HowMuch-Firebase' do
+  pod 'HowMuchCore', :path => '../HowMuch-Core/'
+  pod 'Firebase', '~> 3.2'
+  pod 'Firebase/Auth', '~> 3.2'
+  pod 'Firebase/Database', '~> 3.0'
+end

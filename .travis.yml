@@ -6,3 +6,6 @@ script:
   - cd HowMuch-Realm
   - pod install
   - xcodebuild -workspace HowMuch-Realm.xcworkspace/ -scheme HowMuch-Realm clean build -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' | xcpretty -s
+  - cd ../HowMuch-Firebase
+  - pod install
+  - xcodebuild -workspace HowMuch-Firebase.xcworkspace/ -scheme HowMuch-Firebase clean build -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' | xcpretty -s

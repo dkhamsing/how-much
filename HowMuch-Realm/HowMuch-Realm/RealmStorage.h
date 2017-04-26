@@ -12,4 +12,6 @@
 
 @interface RealmStorage : NSObject <StorageProtocol>
 
+- (void)debugClean;
+
 @end

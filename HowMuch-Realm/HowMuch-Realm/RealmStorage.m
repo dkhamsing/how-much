@@ -32,6 +32,11 @@
 
 @implementation RealmStorage
 
+- (void)debugClean;
+{
+    [[NSFileManager defaultManager] removeItemAtURL:[RLMRealmConfiguration defaultConfiguration].fileURL error:nil];
+}
+
 - (void)deleteItem:(id)item completion:(void (^)(NSError *))completion
 {
     RLMRealm *realm = [RLMRealm defaultRealm];

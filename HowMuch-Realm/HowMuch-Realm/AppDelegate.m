@@ -22,6 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+//    [[RealmStorage new] debugClean];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = ({
         ListCoordinator *coordinator = [ListCoordinator coreViewModel];

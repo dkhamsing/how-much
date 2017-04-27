@@ -16,11 +16,11 @@
 
 @property NSString *brand;
 
-@property NSInteger dateUpdated;
+@property NSNumber<RLMInt> *dateUpdated;
 
 @property NSString *name;
 
-@property double price;
+@property NSNumber<RLMFloat> *price;
 
 @property NSString *store;
 
@@ -59,12 +59,11 @@
     
     NSString *brand = v[@"brand"];
 
-    NSInteger dateUpdated = [NSDate new].timeIntervalSince1970;
+    NSNumber *dateUpdated = v[@"dateUpdated"];
     
     NSString *name = v[@"name"];
     
-    NSNumber *p = v[@"price"];
-    double price = p.doubleValue;
+    NSNumber *price = v[@"price"];
 
     NSString *store = v[@"store"];
     
@@ -95,10 +94,9 @@
     
     NSString *name = v[@"name"];
     
-    NSInteger dateUpdated = [NSDate new].timeIntervalSince1970;
+    NSNumber *dateUpdated = v[@"dateUpdated"];
     
-    NSNumber *p = v[@"price"];
-    double price = p.doubleValue;
+    NSNumber *price = v[@"price"];
     
     NSString *store = v[@"store"];
     
@@ -130,8 +128,7 @@
     
     NSString *name = o.name;
     
-    double p = o.price;
-    NSNumber *price = @(p);
+    NSNumber *price = o.price;
     
     NSString *store = o.store;
     
